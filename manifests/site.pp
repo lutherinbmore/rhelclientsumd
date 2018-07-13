@@ -1,6 +1,6 @@
 node default {
 }
-node 'PuppetBoxRHEL764.umd.edu' {
+node 'PuppetBoxRHEL764' {
   include role::puppet_master
 }
 node /^ESSILT\d+$/ {
