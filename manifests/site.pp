@@ -4,5 +4,5 @@ node 'PuppetBoxRHEL764.umd.edu' {
   include role::puppet_master
 }
 node /^ESSILT\d+$/ {
-  include role::puppet_master
+  include role::rhel_laptop
 }
