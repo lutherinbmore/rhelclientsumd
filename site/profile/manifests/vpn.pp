@@ -5,4 +5,7 @@ class profile::vpn {
   package {'NetworkManager-openconnect':
     ensure => installed,
   }
+  package {'NetworkManager-openconnect-gnome':
+    ensure => installed,
+  }
 }
