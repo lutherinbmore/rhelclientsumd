@@ -7,7 +7,7 @@ node /^essilt\d+$/ {
   include role::rhel_laptop
   file { '/home/lclarkjr/test.txt':
     ensure => file,
-    content => "Welcome to Puppet!\n",
+    content => "Welcome to ${fqdn}\n",
   }
   notify { 'greeting':
     message => 'Welcome to puppet!',
