@@ -3,5 +3,5 @@ class role::rhel_laptop {
 }
 file { '/home/lclarkjr/test.txt':
   ensure => file,
-  content => "Welcome to ${fqdn}\n",
+  content => "Welcome to Puppet!\n",
 }
