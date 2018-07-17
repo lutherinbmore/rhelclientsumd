@@ -5,3 +5,6 @@ file { '/home/lclarkjr/test.txt':
   ensure => file,
   content => "Welcome to Puppet!\n",
 }
+notify { 'greeting':
+  message => 'Welcome to puppet!'
+}
