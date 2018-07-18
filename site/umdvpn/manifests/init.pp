@@ -10,6 +10,7 @@ class umdvpn {
   }
   file { '/etc/NetworkManager/system-connections/UMD':
     ensure => file,
-    source => 'puppet:///modules/umdvpn/UMD'
+    source => 'puppet:///modules/umdvpn/UMD',
+    mode => '0600',
   }
 }
