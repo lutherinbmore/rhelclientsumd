@@ -8,4 +8,8 @@ class umdvpn {
   package {'NetworkManager-openconnect-gnome':
     ensure => installed,
   }
+  file { '/etc/NetworkManager/system-connections/UMD':
+    ensure => file,
+    source => 'puppet:///modules/umdvpn/UMD'
+  }
 }
