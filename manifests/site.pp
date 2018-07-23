@@ -14,5 +14,8 @@ node /^essilt\d+$/ {
 }
 node /^essilb\d+$/ {
   include role::rhel_laptop
+  notify { 'test':
+    message => 'Can you hear me?',
+  }  
 }
 
