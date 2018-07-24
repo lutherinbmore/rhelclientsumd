@@ -5,6 +5,6 @@ class adobeccextras {
   }
   package { 'Illustrator':
     ensure => installed,
-    source => '\\ESSIWK170.ad.umd.edu\Deployment\Illustrator\Build\Illustrator.msi',
+    source => '\\\ESSIWK170.ad.umd.edu\Deployment\Illustrator\Build\Illustrator.msi',
   }
 }
