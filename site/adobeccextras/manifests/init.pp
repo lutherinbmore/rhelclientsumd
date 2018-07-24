@@ -1,10 +1,10 @@
 class adobeccextras {
   package { 'Photoshop':
     ensure => installed,
-    source => '\\ESSIWK170.ad.umd.edu\Deploy\Photoshop\Build\Photoshop.msi',
+    source => '\\ESSIWK170.ad.umd.edu\Deployment\Photoshop\Build\Photoshop.msi',
   }
   package { 'Illustrator':
     ensure => installed,
-    source => '\\ESSIWK170.ad.umd.edu\Deploy\Illustrator\Build\Illustrator.msi',
+    source => '\\ESSIWK170.ad.umd.edu\Deployment\Illustrator\Build\Illustrator.msi',
   }
 }
