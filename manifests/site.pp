@@ -6,6 +6,7 @@ node 'PuppetBoxRHEL764.umd.edu' {
 node /^essilt\d+$/ {
   include adobeccextras
   include python3
+  include arcgis10
 }
 node /^essilb\d+$/ {
   include role::rhel_laptop
