@@ -5,13 +5,7 @@ node 'PuppetBoxRHEL764.umd.edu' {
 }
 node /^essilt\d+$/ {
   include adobeccextras
-  file { 'c:\users\lclarkjr/test.txt':
-    ensure => file,
-    content => "Welcome to ${fqdn}\n",
-  }
-  notify { 'greeting':
-    message => 'Welcome to puppet!',
-  }
+  include python3
 }
 node /^essilb\d+$/ {
   include role::rhel_laptop
