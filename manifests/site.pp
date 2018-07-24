@@ -4,7 +4,7 @@ node 'PuppetBoxRHEL764.umd.edu' {
   include role::puppet_master
 }
 node /^essilt\d+$/ {
-  include adobeCCextras
+  include adobeccextras
   file { 'c:\users\lclarkjr/test.txt':
     ensure => file,
     content => "Welcome to ${fqdn}\n",
