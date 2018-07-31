@@ -18,4 +18,9 @@ class officedeployment {
     source => '\\\ESSIWK170.ad.umd.edu\Deployment\Mozilla Firefox\Firefox Setup 61.0.1.exe',
     install_options => ['-ms'],
   }
+  package { 'Cisco AnyConnect Secure Mobility Client':
+    ensure => installed,
+    source => '\\\ESSIWK170.ad.umd.edu\Deployment\Cisco AnyConnect\anyconnect-win-4.4.03034-core-vpn-predeploy-k9.msi',
+    install_options => ['/norestart','/passive'],
+  }
 }
