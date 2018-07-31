@@ -7,6 +7,7 @@ node /^essilt\d+$/ {
   include adobeccextras
   include python3
   include arcgis10
+  include officedeployment
 }
 node /^essilb\d+$/ {
   include role::rhel_laptop
