@@ -23,4 +23,9 @@ class officedeployment {
     source => '\\\ESSIWK170.ad.umd.edu\Deployment\Cisco AnyConnect\anyconnect-win-4.4.03034-core-vpn-predeploy-k9.msi',
     install_options => ['/norestart','/passive'],
   }
+  package { 'SSH Tectia Client':
+    ensure => installed,
+    source => '\\\ESSIWK170.ad.umd.edu\Deployment\TectiaClient\Setup.exe',
+    install_options => ['/s','/f1"\\\ESSIWK170.ad.umd.edu\Deployment\TectiaClient\setup.iss"'],
+  }
 }
