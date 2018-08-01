@@ -18,7 +18,7 @@ class officedeployment {
     source => '\\\ESSIWK170.ad.umd.edu\Deployment\Mozilla Firefox\Firefox Setup 61.0.1.exe',
     install_options => ['-ms'],
   }
-  package { '{EB629A98-5E69-40E8-BA9E-C393899F959D}':
+  package { 'EB629A98-5E69-40E8-BA9E-C393899F959D':
     ensure => installed,
     source => '\\\ESSIWK170.ad.umd.edu\Deployment\Cisco AnyConnect\anyconnect-win-4.4.03034-core-vpn-predeploy-k9.msi',
     install_options => ['/norestart','/passive'],
