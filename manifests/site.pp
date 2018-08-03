@@ -14,6 +14,7 @@ node /^essilt\d+$/ {
 }
 node 'essiwk170' {
   include arcgis10
+  include adobeccextras
 }
 node /^essilb\d+$/ {
   include role::rhel_laptop
