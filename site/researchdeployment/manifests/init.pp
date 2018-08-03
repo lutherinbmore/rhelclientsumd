@@ -6,6 +6,7 @@ class researchdeployment {
   } ->
   file { 'C:\Users\Public\Desktop\matlab.lnk':
   ensure => file,
-  source => 'puppet:///modules/researchdeployment/matlab.lnk'
+  source => 'puppet:///modules/researchdeployment/matlab.lnk',
+  source_permissions => ignore,
   }
 }
