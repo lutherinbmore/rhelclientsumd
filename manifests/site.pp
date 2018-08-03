@@ -12,6 +12,9 @@ node 'essilt479' {
 node /^essilt\d+$/ {
   include officedeployment
 }
+node 'essiwk170' {
+  include arcgis10
+}
 node /^essilb\d+$/ {
   include role::rhel_laptop
 }
