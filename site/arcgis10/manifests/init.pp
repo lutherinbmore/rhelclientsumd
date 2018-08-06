@@ -9,7 +9,7 @@ class arcgis10 {
     source => 'puppet:///modules/arcgis10/ArcGISActivation.ps1',
     source_permissions => ignore,
   }
-  exec { 'powershell.exe c:\ArcGISActivation.ps1':
+  exec { 'powershell.exe -executionpolicy remotesigned -file c:\ArcGISActivation.ps1':
     path => 'C:\Windows\System32\WindowsPowerShell\v1.0\\',
     require => File['c:\ArcGISActivation.ps1'],
     creates => 'C:\Program Files (x86)\ArcGIS\Desktop10.6\licensed',
