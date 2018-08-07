@@ -9,4 +9,9 @@ class researchdeployment {
   source => 'puppet:///modules/researchdeployment/matlab.lnk',
   source_permissions => ignore,
   }
+  package { 'PuTTY release 0.70 (64-bit)':
+    ensure => installed,
+    source => '\\\essi12.umd.edu\deployment-share\PuTTY\putty-64bit-0.70-installer.msi',
+    install_options => ['/norestart','/passive'],
+  }
 }
