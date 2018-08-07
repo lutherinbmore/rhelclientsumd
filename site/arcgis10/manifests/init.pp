@@ -11,7 +11,7 @@ class arcgis10 {
   }
   exec { 'powershell.exe -executionpolicy remotesigned -file c:\ArcGISActivation.ps1':
     path => 'C:\Windows\System32\WindowsPowerShell\v1.0\\',
-    require => File['c:\ArcGISActivation.ps1'],Package['ArcGIS Desktop 10.6'],
+    require => [ File['c:\ArcGISActivation.ps1'],Package['ArcGIS Desktop 10.6'] ],
     creates => 'C:\Program Files (x86)\ArcGIS\Desktop10.6\licensed',
   }
 }
