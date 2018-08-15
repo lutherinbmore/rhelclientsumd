@@ -19,4 +19,14 @@ class researchdeployment {
   source => '\\\essi12.umd.edu\deployment-share\IDL8.6\idl86-win.exe',
   install_options => ['/LOADINF=\\\essi12.umd.edu\deployment-share\IDL8.6\IDL_only.ini','/SP','/VERYSILENT','/SUPPRESSMSGBOXES','/NOCANCEL','/NORESTART','/FORCECLOSEAPPLICATIONS'],
   }
+  file {'c:\IDLActivation.ps1':
+    ensure => file,
+    source => 'puppet:///modules/researchdeployment/IDLActivation.ps1',
+    source_permissions => ignore,
+  }
+  exec { 'powershell.exe -executionpolicy remotesigned -file c:\IDLActivation.ps1':
+    path => 'C:\Windows\System32\WindowsPowerShell\v1.0\\',
+    require => [ File['c:\IDLActivation.ps1'],Package['IDL 8.6'] ],
+    creates => 'C:\Program Files\Harris\licensed',
+  }
 }
