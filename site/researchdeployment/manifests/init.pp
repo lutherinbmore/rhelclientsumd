@@ -29,4 +29,9 @@ class researchdeployment {
     require => [ File['c:\IDLActivation.ps1'],Package['IDL 8.6'] ],
     creates => 'C:\Program Files\Harris\licensed',
   }
+  package { 'StarNet FastX 2':
+    ensure => installed,
+    source => '\\\essi12.umd.edu\deployment-share\FastX\FastX.msi'
+    install_options => ['/norestart','/passive'],
+  }
 }
