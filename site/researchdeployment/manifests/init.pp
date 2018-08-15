@@ -14,4 +14,9 @@ class researchdeployment {
     source => '\\\essi12.umd.edu\deployment-share\PuTTY\putty-64bit-0.70-installer.msi',
     install_options => ['/norestart','/passive'],
   }
+  package { 'IDL 8.6':
+  ensure => installed,
+  source => '\\\essi12.umd.edu\deployment-share\IDL8.6\idl86-win.exe',
+  install_options => ['/LOADINF=\\\essi12.umd.edu\deployment-share\IDL8.6\IDL_only.ini','/SP','/VERYSILENT','/SUPPRESSMSGBOXES','/NOCANCEL','/NORESTART','/FORCECLOSEAPPLICATIONS'],
+  } ->
 }
