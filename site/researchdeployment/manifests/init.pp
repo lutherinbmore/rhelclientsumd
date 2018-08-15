@@ -31,7 +31,7 @@ class researchdeployment {
   }
   package { 'StarNet FastX 2':
     ensure => installed,
-    source => '\\\essi12.umd.edu\deployment-share\FastX\FastX.msi'
+    source => '\\\essi12.umd.edu\deployment-share\FastX\FastX.msi',
     install_options => ['/norestart','/passive'],
   }
 }
