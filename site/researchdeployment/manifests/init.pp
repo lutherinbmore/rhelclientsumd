@@ -34,4 +34,9 @@ class researchdeployment {
     source => '\\\essi12.umd.edu\deployment-share\FastX\FastX.msi',
     install_options => ['/norestart','/passive'],
   }
+  package { 'X-Win32 18':
+    ensure => installed,
+    source => '\\\essi12.umd.edu\deployment-share\X-Win32\X-Win32 18.msi',
+    install_options => ['/norestart','/passive'],
+  }
 }
